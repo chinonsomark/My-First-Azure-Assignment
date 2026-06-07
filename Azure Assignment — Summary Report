@@ -1,0 +1,50 @@
+# Azure Assignment — Summary Report
+**Student Name:** [CHINONSO MARK UGWUNNA]
+**Date:** 2026-06-07
+**Course:** Cloud Computing
+### Region Chosen: South Africa North (Johannesburg)
+
+2. Shared Responsibility Model
+ Resource Deployed: [Storage Account / Virtual Machine]
+
+The Shared Responsibility Model defines which security and operational tasks are managed by Microsoft (Azure) and which remain the responsibility of the customer.
+
+### If you deployed a Storage Account (PaaS):
+
+**Microsoft Azure is responsible for:**
+- Physical data centres, servers, and storage hardware
+- Platform availability and uptime SLAs
+- Encryption of data at rest (AES-256 by default)
+- Physical network security and DDoS protection
+- Redundancy and replication infrastructure (LRS/GRS)
+
+**I (the customer) am responsible for:**
+- Managing access keys — rotating them regularly
+- Configuring RBAC roles to restrict who can read/write data
+- Enabling secure transfer (HTTPS only)
+- Setting network access rules (firewall, virtual network)
+- Classifying and labelling sensitive data
+- Configuring soft delete and versioning to prevent data loss
+
+If you deployed a Virtual Machine (IaaS):
+
+**Microsoft Azure is responsible for:**
+- Physical host hardware, hypervisor, and host OS
+- Physical network switches and datacenter security
+- Storage hardware underlying the managed disk
+
+**I (the customer) am responsible for:**
+- Applying OS updates and security patches to the guest OS
+- Installing and configuring antivirus/endpoint protection
+- Managing NSG firewall rules to restrict inbound traffic
+- Securing SSH keys or rotating passwords
+- Backing up VM data and configuring recovery options
+- Identity management (who can log in to the VM)
+
+
+ 3. Key Takeaways
+
+- Cloud does not mean zero responsibility — the customer always owns data security and access management.
+- IaaS (VMs) requires more customer management than PaaS (Storage Accounts, App Service, etc.).
+- Region selection should be driven by latency, compliance, and service availability requirements.
+```
